@@ -800,7 +800,24 @@ section,
 /*--------------------------------------------------------------
 # Portfolio Section
 --------------------------------------------------------------*/
+/* enforce uniform portfolio-grid image size */
+.portfolio .portfolio-item {
+  overflow: hidden; /* crop anything that sticks outside the box */
+}
 
+.cover-img {
+  object-fit: cover;
+}
+
+.contain-img{
+  object-fit: contain;
+  background-color: #f0f0f0;
+}
+
+.portfolio .portfolio-item img {
+  width: 100%;
+  aspect-ratio: 1 / 1;     /* forces a square box */
+}
 .portfolio .portfolio-filters {
   padding: 0;
   margin:  0 auto 20px auto;
